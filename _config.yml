@@ -1,6 +1,9 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://nutbrown.io"
+title: Type on Strap # site's title
+description: "A website with blog posts and pages" # used by search engines
+
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -13,11 +16,11 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <p>Stephen Nutbrown's personal tech-themed blog, mostly featuring AWS cloud projects written in a wide range of languages.</p>
-     <p>Got an idea or improvement? Pull requests or bug reports are welcome <a href="https://github.com/NutterzUK/nutbrown">here</a>.</p>
+    <p>Stephen Nutbrown's personal tech-themed blog, mostly featuring AWS cloud projects written in a wide range of languages.</p>
+    <p>Got an idea or improvement? Pull requests or bug reports are welcome <a href="https://github.com/NutterzUK/nutbrown">here</a>.</p>
   header_text_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: >
-   Gratefully powered by <a href="https://jekyllrb.com/">Jekyll</a>, using <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+    Gratefully powered by <a href="https://jekyllrb.com/">Jekyll</a>, using <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
   # Icons
   rss: false
@@ -31,26 +34,53 @@ theme_settings:
   github: "NutterzUK/nutbrown"
   google_plus:
   instagram:
+  keybase:
   linkedin: "https://www.linkedin.com/in/stephen-nutbrown-59a94838/"
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange:
   steam: "NutterzUK"
   tumblr:
   twitter: "nutterzuk"
+  vimeo:
   wordpress:
   youtube:
+  
+  # Sharing options
+  share_buttons:
+    facebook: true
+    twitter: true
+    google_plus: true
+    tumblr:
+    pinterest:
+    pocket:
+    reddit: true
+    linkedin:
+    wordpress:
+    email: true
 
-  # Scripts
+  # Scripts / Features 
   google_analytics: "UA-55663428-6"
   disqus_shortname: "nutbrown-io"
-  katex: false # Enable if using math markup
-
+  katex: false
+  
+  special_page:
+    search: 
+      icon: "search" # Assuming page link and icon are the same
+      enabled: true
+    tags:
+      icon: "tags"
+      enabled: true
+  
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
+  str_share_on: "Share on"
+  str_add_to: "Add to"
   str_email: "Email"
+  str_tweet: "Tweet"
+  str_pin_it: "Pin it"
   str_next_post: "Next post"
   str_previous_post: "Previous post"
   str_next_page: "Next"
@@ -63,17 +93,20 @@ theme_settings:
   google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
   # Post navigation
-  post_navigation: false
-
+  post_navigation: true
+  
+  
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
+
 
 # PORTFOLIO
 collections:
   portfolio:
     output: true
     permalink: /:collection/:name
+
 
 # BUILD SETTINGS
 markdown: kramdown
@@ -82,5 +115,5 @@ sass:
   sass_dir: _sass
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag]
-theme: type-on-strap # If using the theme as a jekyll theme gem
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
+#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png", "package.json", "node_modules", "gulpfile.js", ".idea/*"]
