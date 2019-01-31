@@ -5,7 +5,8 @@ phases:
     commands:
       - export LANG="en_US.UTF-8"
       - export LC_ALL="en_US.UTF-8"
-      - gem install bundler jekyll
+      - gem install bundler -v 1.17.1
+      - gem install jekyll -v 3.8.5
   build:
     commands:
       - echo "******** Install Bundles ********"
