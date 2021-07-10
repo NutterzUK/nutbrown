@@ -10,6 +10,8 @@ phases:
       - gem install kramdown-parser-gfm
   build:
     commands:
+      - ruby -v
+      - gem -v
       - echo "******** Install Bundles ********"
       - bundle install
       - echo "******** Building Jekyll site ********"
